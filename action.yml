@@ -21,7 +21,7 @@ runs:
   using: "composite"
   steps:
     - run: |
-        [ ! -x /home/runner/go/bin/notify ] && GO111MODULE=on go get -v github.com/projectdiscovery/notify/cmd/notify@v0.0.2
+        [ ! -x /home/runner/go/bin/notify ] && go install -v github.com/projectdiscovery/notify/cmd/notify@latest
         [ ! -z ${{ inputs.data }} ] && echo "data=< ${{ inputs.data}}" >> $GITHUB_ENV
         [ ! -z ${{ inputs.config }} ] && mkdir -p /home/runner/.config/notify/ && cp ${{ inputs.config }} /home/runner/.config/notify/notify.conf
         [ ! -z "${{ inputs.flags }}" ] && echo "flags=${{ inputs.flags }}" >> $GITHUB_ENV

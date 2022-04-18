@@ -35,10 +35,10 @@ jobs:
   notify-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
         with:
-          go-version: 1.15
+          go-version: 1.17
 
       - name: 🗒 Notify - Keep me updated
         uses: projectdiscovery/notify-action@main
@@ -52,7 +52,7 @@ Available Inputs
 ------
 
 | Key      | Description                        | Required |
-| -------- | ---------------------------------- | -------- |
+|----------|------------------------------------|----------|
 | `data`   | Input file to send with notify     | false    |
 | `config` | Config file to use with notify     | false    |
 | `flags`  | Additional notify CLI flags to use | false    |
