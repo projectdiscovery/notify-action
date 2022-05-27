@@ -17,7 +17,7 @@ Example Usage
         uses: projectdiscovery/notify-action@main
         with:
           data: output.txt
-          config: notify-config.yaml
+          provider-config: notify-config.yaml
 ```
 
 **Example workflow** - `.github/workflows/notify.yml`
@@ -44,7 +44,7 @@ jobs:
         uses: projectdiscovery/notify-action@main
         with:
           data: output.txt
-          config: notify-config.yaml
+          provider-config: notify-config.yaml
 ```
 
 
@@ -54,5 +54,5 @@ Available Inputs
 | Key      | Description                        | Required |
 |----------|------------------------------------|----------|
 | `data`   | Input file to send with notify     | false    |
-| `config` | Config file to use with notify     | false    |
+| `provider-config` | Config file to use with notify     | false    |
 | `flags`  | Additional notify CLI flags to use | false    |
